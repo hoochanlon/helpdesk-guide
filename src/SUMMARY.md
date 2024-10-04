@@ -3,9 +3,9 @@
 [《网络、域控与信息安全》](guide/readme.md)
 
 
-# 创建与测试
+# 从创建域控开始
 
-- [创建域控](chuangjian_ceshi/anzhuang_yukong.md)
+- [创建域控](creator/ad/anzhuang_yukong.md)
 
 # 日常工作
 
@@ -23,5 +23,5 @@
 
 -----------
 
-[最后寄语](misc/xiexie.md)
+[最后寄语](xiexie/readme.md)
 
