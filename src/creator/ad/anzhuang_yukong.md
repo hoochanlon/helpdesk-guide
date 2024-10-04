@@ -36,9 +36,45 @@ DNS 作用负责将域名解析成 IP 地址。域控向 DNS 注册 SRV（服务
 
 ## 安装活动目录
 
+* 上网模式：仅主机；IP 配置：192.168.0.99/24 192.168.0.1
+* 勾选 AD域服务、DNS服务器，一直下一步
 
+![ ](https://s2.loli.net/2024/10/04/rXoEhWai2cD7m6F.png)
+
+![ ](https://s2.loli.net/2024/10/04/n29UxJw7FXpBoMZ.png)
+
+选择新林，注意带 .com、.net 等此类域名。有关【林功能级别】和【域功能级别】则是多域环境下的域控版本兼容性，有黄色提示“无法创建DNS委派”不用管，下一步。
+
+![ ](https://s2.loli.net/2024/10/04/k1S68pEa9VAO5Xw.png)
+
+![ ](https://s2.loli.net/2024/10/04/PqQXHv9RgULVY2W.png)
+
+SYSVOL是放组策略的，必须是 NTFS 格式。
+
+![ ](https://s2.loli.net/2024/10/04/EtBS2ka5wTH7JbV.png)
+
+重启后用命令重启下网络登录服务。如果缺少服务有可能找不到域控服务器，确保如图所示的这类几个文件是完整的。
+
+```
+net stop netlogon
+net start netlogon
+```
+
+![ ](https://s2.loli.net/2024/10/04/ziufsQMgATVbdaj.png)
+
+
+## 将计算机加入域控
+
+在域控主机进入【Active Directory 用户和计算机】，创建【组织单位】 并接着创建用户即可开始测试。
+
+![ ](https://s2.loli.net/2024/10/04/isZHjC4SzwnO7LT.png)
+
+![ ](https://s2.loli.net/2024/10/04/uvGXO9jQIVi6YHf.png)
+
+![ ](https://s2.loli.net/2024/10/04/itqhIP85RGaNurf.png)
 
 
 ## 参考资料
 
 * [imaofu - 个人专业文档](https://limaofu.github.io/)
+* [韩立刚 - Windows2012活动目录搭建域环境视频课程](https://edu.51cto.com/lesson/46874.html)
