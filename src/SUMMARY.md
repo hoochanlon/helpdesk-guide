@@ -6,6 +6,7 @@
 # 从创建域控开始
 
 - [创建域控](creator/ad/anzhuang_yukong.md)
+- [域计算机、域用户管理](creator/ad/yujisuanji_yuyonghu_guanli.md)
 
 # 日常工作
 

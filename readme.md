@@ -13,3 +13,5 @@
 上网权限
 
 域控补丁更新、文件夹管理
+
+采用 [MDBOOK](https://hellowac.github.io/mdbook-doc-zh/zh-cn/index.html) 构建， 语法样式参考：[rust-lang/mdBook](https://github.com/rust-lang/mdBook/tree/master/guide/src)。
