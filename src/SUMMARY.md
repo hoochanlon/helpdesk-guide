@@ -6,7 +6,8 @@
 # 从创建域控开始
 
 - [创建域控](creator/ad/anzhuang_yukong.md)
-- [域计算机、域用户管理](creator/ad/yujisuanji_yuyonghu_guanli.md)
+- [添加计算机到域，测试软件限制](creator/ad/yu_ruanjian_xianzhi.md)
+- [使用组策略部署软件](creator/ad/yu_ruanjian_anzhuang.md)
 
 # 日常工作
 
@@ -21,6 +22,18 @@
 # 综合故障排除
 
 - [光纤跳纤](guzhang_chuli/guangxuan_tiaoxuan.md)
+
+<!-- # 验收明细
+
+- [物理/网络/终端/数据安全及权限管控](yanshou/mingxi/wu_wang_shu_quan.md)
+
+# 业务连续性管理
+
+- [UPS应急演练方案](yanshou/yu_an/ups.md)
+- [服务器故障预案](yanshou/yu_an/fuwuqi.md)
+- [网络故障应急方案](yanshou/yu_an/wangluo.md)
+- [网络设备故障应急方案](yanshou/yu_an/wangluo_shebei.md)
+- [专线故障预案](yanshou/yu_an/zhuanxian.md) -->
 
 -----------
 
