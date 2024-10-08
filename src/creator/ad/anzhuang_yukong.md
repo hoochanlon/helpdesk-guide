@@ -82,5 +82,6 @@ net start netlogon
 
 ## 参考资料
 
-* [imaofu - 个人专业文档](https://limaofu.github.io/)
 * [韩立刚 - Windows2012活动目录搭建域环境视频课程](https://edu.51cto.com/lesson/46874.html)
+* [imaofu - 个人专业文档](https://limaofu.github.io/)
+* [飘渺的尘埃 - 域学习笔记九：使用组策略部署软件](https://www.cnblogs.com/atomy/p/13727152.html)

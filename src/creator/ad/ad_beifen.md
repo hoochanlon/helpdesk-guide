@@ -2,7 +2,7 @@
 
 ## 原理
 
-> 在设置IP地址的【高级】选项中，可以设置三个以上备用的DNS
+> 在设置IP地址的【高级】选项中，可以设置三个以上备用的DNS。BTW，顺便留意此类问题 — [解决win10（1809）加域后，域管理员无权限设置](https://www.cnblogs.com/subsea/p/14178434.html)
 
 增加一至两台的备份DC，需要备用 DNS，当主DC出现问题，可以通过备用DNS连接到备用DC。
 
@@ -51,3 +51,15 @@
 测新注册的域用户登录
 
 ![ ](https://cdn.sa.net/2024/10/07/uIpT3rfgBY7siQ1.png)
+
+通过运行`Repadmin /showrepl`命令，可以查看域控服务器之间的复制状态，以确定主备域控服务器的角色。
+
+![ ](https://cdn.sa.net/2024/10/07/1vq7YVZGd9zSfkx.png)
+
+
+## 参考资料
+
+* [飘渺的尘埃 - 域学习笔记九：使用组策略部署软件](https://www.cnblogs.com/atomy/p/13727152.html)
+* [worktile - 域控服务器如何看主备](https://worktile.com/kb/ask/1280091.html)
+* [subsea - 解决win10（1809）加域后，域管理员无权限设置](https://www.cnblogs.com/subsea/p/14178434.html)
+* [weixin_33709609 - Repadmin出现DsReplicaGetInfo() Failed with status 8453 (0x2105)错误](https://blog.csdn.net/weixin_33709609/article/details/89938610)
