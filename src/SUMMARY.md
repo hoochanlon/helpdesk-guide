@@ -8,9 +8,10 @@
 - [创建域控](creator/ad/anzhuang_yukong.md)
 - [添加计算机到域，测试软件限制](creator/ad/yu_ruanjian_xianzhi.md)
 - [使用组策略部署软件](creator/ad/yu_ruanjian_anzhuang.md)
-- [添加备份域控制器实现容错](creator/ad/ad_beifen.md)
+- [添加备份域控制器实现容错](creator/ad/beifen_yukong.md)
 - [将域控制器迁移到新买的服务器](creator/ad/huanxin_yukong.md)
-- [使用站点控制活动目录](creator/ad/zhandian_ad.md)
+- [使用站点控制活动目录](creator/ad/zhandian_yukong.md)
+- [FSMO 准备资料](creator/ad/fsmo_zhunbei_ziliao.md)
 
 # 日常工作
 
