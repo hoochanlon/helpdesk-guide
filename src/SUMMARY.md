@@ -3,7 +3,7 @@
 [《网络、域控与信息安全》](guide/readme.md)
 
 
-# 从创建域控开始
+# 从创建域控开始（框架）
 
 - [创建域控](creator/ad/anzhuang_yukong.md)
 - [添加计算机到域，测试软件限制](creator/ad/yu_ruanjian_xianzhi.md)
@@ -26,6 +26,8 @@
 # 综合故障排除
 
 - [光纤跳纤](guzhang_chuli/guangxuan_tiaoxuan.md)
+- [监控掉线恢复](guzhang_chuli/jiankong_diaoxian_huihu.md)
+- [Ping 传输失败，域控连不上](guzhang_chuli/ping_shibai_yukong_lianbushang.md)
 
 <!-- # 验收明细
 
