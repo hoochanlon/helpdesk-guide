@@ -12,6 +12,7 @@
 - [将域控制器迁移到新买的服务器](creator/ad/huanxin_yukong.md)
 - [使用站点控制活动目录](creator/ad/zhandian_yukong.md)
 - [FSMO 准备资料](creator/ad/fsmo_zhunbei_ziliao.md)
+- [WinServer 磁盘管理](creator/ad/cipan_guanli.md)
 
 # 日常工作
 
