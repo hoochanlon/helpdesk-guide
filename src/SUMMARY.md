@@ -3,7 +3,7 @@
 [《网络、域控与信息安全》](guide/readme.md)
 
 
-# 从创建域控开始（框架）
+# 从创建域控开始
 
 - [创建域控](creator/ad/anzhuang_yukong.md)
 - [添加计算机到域，测试软件限制](creator/ad/yu_ruanjian_xianzhi.md)
@@ -15,11 +15,16 @@
 - [WinServer 磁盘管理](creator/ad/cipan_guanli.md)
 - [安装 wsus 集中更新管理](creator/ad/anzhuang_wsus.md)
 
+# 域控粒度细化
+
+- [域用户统一桌面壁纸](lidu_xihua/ad/ad_bizhi.md)
+
 # 日常工作
 
-- [机房巡检工作](richang/jifang_xunjian.md)
-- [上网准入与加域](richang/zhunru_jiayu.md)
+- [机房巡检工作与UPS应急演练](richang/jifang_xunjian.md)
 - [防火墙月度备份](richang/fanghuoqiang_beifen.md)
+- [上网准入与加域](richang/zhunru_jiayu.md)
+
 
 # 楼层网络规划
 
@@ -31,7 +36,11 @@
 - [监控掉线恢复](guzhang_chuli/jiankong_diaoxian_huihu.md)
 - [Ping 传输失败，域控连不上](guzhang_chuli/ping_shibai_yukong_lianbushang.md)
 
-<!-- # 验收明细
+<!-- # 整改
+
+- [信息安全整改报告 —— 摄像头篇](zhenggai/zg_shexiangtou.md)
+
+# 验收明细
 
 - [物理/网络/终端/数据安全及权限管控](yanshou/mingxi/wu_wang_shu_quan.md)
 
