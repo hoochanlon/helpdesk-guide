@@ -15,6 +15,10 @@
 - [WinServer 磁盘管理](creator/ad/cipan_guanli.md)
 - [安装 wsus 集中更新管理](creator/ad/anzhuang_wsus.md)
 
+# 服务器安装
+
+- [服务器安装系统](creator/fuwuqi/r430_anzhuangxitong.md)
+
 # 域控粒度细化
 
 - [域用户统一桌面壁纸](lidu_xihua/ad/ad_bizhi.md)
