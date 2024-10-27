@@ -7,6 +7,8 @@
 >
 > 摘自 [yuyin86 - 以太网接口的双工模式及自动协商原理](https://blog.csdn.net/yuyin86/article/details/25460029)
 
+
+
 ## 参考资料
 
 * [流水灯 - 以太网 ------ Auto-Negotiation（自动协商）](https://www.cnblogs.com/god-of-death/p/9362841.html)

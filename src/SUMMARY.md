@@ -11,12 +11,10 @@
 - [添加备份域控制器实现容错](creator/ad/beifen_yukong.md)
 - [将域控制器迁移到新买的服务器](creator/ad/huanxin_yukong.md)
 - [使用站点控制活动目录](creator/ad/zhandian_yukong.md)
-- [FSMO 准备资料](creator/ad/fsmo_zhunbei_ziliao.md)
 - [WinServer 磁盘管理](creator/ad/cipan_guanli.md)
 - [R430服务器两块硬盘组硬件 RAID](creator/ad/r430_raid.md)
 - [安装 wsus 集中更新管理](creator/ad/anzhuang_wsus.md)
-
-
+- [FSMO 准备资料](creator/ad/fsmo_zhunbei_ziliao.md)
 
 # 域控粒度细化
 
@@ -27,6 +25,11 @@
 - [机房巡检工作与UPS应急演练](richang/jifang_xunjian.md)
 - [防火墙月度备份](richang/fanghuoqiang_beifen.md)
 - [上网准入与加域](richang/zhunru_jiayu.md)
+- [批量添加、删除域用户](richang/tianjia_shanchu_user.md)
+- [批量对人员进行文件夹授权](richang/wenjianjia_shouquan.md)
+- [批量删除文件夹权限的未知用户残留](richang/files_unkown_users_del.md)
+- [组织单元与域用户还原（应急储备）](richang/ou_aduser_huanyuan.md)
+
 
 
 # 楼层网络规划
