@@ -13,7 +13,7 @@
 - [使用站点控制活动目录](creator/ad/zhandian_yukong.md)
 - [WinServer 磁盘管理](creator/ad/cipan_guanli.md)
 - [R430服务器两块硬盘组硬件 RAID](creator/ad/r430_raid.md)
-- [安装 wsus 集中更新管理](creator/ad/anzhuang_wsus.md)
+- [安装 wsus](creator/ad/anzhuang_wsus.md)
 - [FSMO 准备资料](creator/ad/fsmo_zhunbei_ziliao.md)
 
 # 域控粒度细化

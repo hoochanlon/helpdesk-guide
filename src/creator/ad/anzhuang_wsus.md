@@ -1,6 +1,6 @@
-# 安装 wsus 集中更新管理
+# 安装 wsus
 
-## 安装 wsus
+## wsus安装流程
 
 首先要保证主机能联网，接着开始安装 wsus。
 
@@ -70,7 +70,7 @@
 ![ ](https://cdn.sa.net/2024/10/19/SIA2kTCyncGrX6R.png)
 
 
-### 遇到的问题
+## 遇到的问题
 
 **WSUS连接错误需要重置服务器**
 
@@ -84,10 +84,35 @@ IIS中 wsus pool 的专用内存限制从1.2G 设置成 3G
 
 ![ ](https://cdn.sa.net/2024/10/19/Hl2nerNJdPAGk3I.png)
 
+
+**IE浏览器老是弹出信任网站**
+
+【本地服务器】-> 【IE增强的安全配置】将启用改成关闭
+
+![ ](https://cdn.sa.net/2024/10/28/Kf5nNtYlq43om6V.png)
+
+
+**microsoft system clr types for sql server 2012 资源查找**
+
+MicrosoftReportViewer2012可由分发组件，请关闭控制台，然后再安装此程序包。但需要 microsoft system clr types for sql server 2012。
+
+![ ](https://cdn.sa.net/2024/10/28/cliSWHgR1Cfewy6.png)
+
+见文：https://community.spiceworks.com/t/microsoft-system-clr-types-for-sql-server-2012/789626/6 ，原理是通过 SQL server 的功能包下载。
+
+找到 SQLSysClrTypes.msi 下载
+
+下载地址：https://www.microsoft.com/en-us/download/details.aspx?id=56041
+
+![ ](https://cdn.sa.net/2024/10/28/dgRCOqLXhAPpDGJ.png)
+
+
 ## 参考资料
 
-* [韩立刚 - 实战：Windows Server 2008 使用WSUS实现内网计算机系统更新](https://blog.51cto.com/91xueit/1133954)
 * [WSUS补丁服务器部署详细 利用WSUS部署更新程序](https://blog.csdn.net/z136370204/article/details/109736394)
 * https://learn.microsoft.com/zh-cn/windows/deployment/update/waas-manage-updates-wsus
 * [freeliver - 部署Windows Server Update Services 4.0](https://www.cnblogs.com/cmt110/p/14174151.html)
 * [qishine - WSUS连接错误需要重置服务器](https://www.cnblogs.com/qishine/p/12727982.html)
+* [WSUS服务器设置解析（一）](https://www.cnblogs.com/cabin/archive/2010/09/01/1814649.html)
+* [AydenForYou - Windows Server 2012 R2 WSUS-6：配置计算机组和客户端目标](https://cloud.tencent.com/developer/news/897247)
+* [羊村懒哥 - WSUS部署与规划](https://blog.csdn.net/m0_68472908/article/details/134919291)
