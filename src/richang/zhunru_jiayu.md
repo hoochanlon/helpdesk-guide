@@ -1,8 +1,10 @@
-# 上网准入与加域
+# 上网许可与加域
 
 > 图片字体太小，右击在【新标签页中打开图片】
 
-## 上网准入
+## 上网许可
+
+### 上网准入
 
 上网准入使用华三inode软件，在inode的控制台添加账户，根据相应格式批量加入。
 
@@ -38,6 +40,16 @@ Get-Content $inputFile -Encoding UTF8 | ForEach-Object {
 
 Write-Host "名字处理完成，结果已写入到 $outputFile"
 ```
+
+### 准入移除
+
+批量操作 -> 进入批量账户维护 -> 选择相关文件，选择 注销账号 下一步。
+
+![ ](https://cdn.sa.net/2024/11/09/xN3uAo9rHP1jFyX.png)
+
+![ ](https://cdn.sa.net/2024/11/09/VvbzY1mpSyukJjX.png)
+
+不被允许注销的用户可以单个处理，点击相关姓名进行强制注销。
 
 ## 域成员管理
 
