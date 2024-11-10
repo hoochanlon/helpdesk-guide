@@ -27,7 +27,7 @@
 - [上网准入与加域](richang/zhunru_jiayu.md)
 - [批量添加、删除域用户及导出](richang/tianjia_shanchu_daochu_user.md)
 - [批量对人员进行文件夹授权](richang/wenjianjia_shouquan.md)
-- [批量删除文件夹权限的未知用户残留](richang/files_unkown_users_del.md)
+- [删除用户共享文件夹权限](richang/shanchu_yonghu_wenjianjia_quanxian.md)
 - [组织单元与域用户还原（应急储备）](richang/ou_aduser_huanyuan.md)
 
 
