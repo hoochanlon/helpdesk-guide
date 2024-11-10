@@ -29,7 +29,7 @@
 - [批量对人员进行文件夹授权](richang/wenjianjia_shouquan.md)
 - [删除用户共享文件夹权限](richang/shanchu_yonghu_wenjianjia_quanxian.md)
 - [组织单元与域用户还原（应急储备）](richang/ou_aduser_huanyuan.md)
-
+- [实施方案撰写排版说明](richang/word_paiban.md)
 
 
 # 楼层网络规划
@@ -41,6 +41,12 @@
 - [光纤跳纤](guzhang_chuli/guangxuan_tiaoxuan.md)
 - [监控掉线恢复](guzhang_chuli/jiankong_diaoxian_huihu.md)
 - [Ping 传输失败，域控连不上](guzhang_chuli/ping_shibai_yukong_lianbushang.md)
+
+
+
+
+
+
 
 <!-- # 整改
 
