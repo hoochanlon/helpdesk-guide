@@ -28,8 +28,9 @@
 - [批量添加、删除域用户及导出](richang/tianjia_shanchu_daochu_user.md)
 - [批量对人员进行文件夹授权](richang/wenjianjia_shouquan.md)
 - [删除用户共享文件夹权限](richang/shanchu_yonghu_wenjianjia_quanxian.md)
+- [文件夹安全权限转换对应的共享权限](richang/wenjianjia_quanxian_zhuanhuan.md)
 - [组织单元与域用户还原（应急储备）](richang/ou_aduser_huanyuan.md)
-- [实施方案撰写排版说明](richang/word_paiban.md)
+- [实施方案撰写及排版说明](richang/word_paiban.md)
 
 
 # 楼层网络规划
