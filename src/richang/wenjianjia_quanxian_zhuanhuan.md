@@ -153,25 +153,13 @@ try {
 
 [老收藏家 - 浅谈NTFS权限迁移与共享权限迁移(上)](https://blog.51cto.com/wzde2012/1873754) 提到安装 ，也就是Windows迁移工具。
 
-当时安装完，使用时一直处于以下状态: 
+当时安装完，使用时一直处于以下状态，于是也放弃了。
 
 * 正在打开连接。请在目标服务器上运行 Receive-SmigServerData。
 * 正在打开连接。请在源服务器上运行 Send-SmigServerData。
-
-
-于是也放弃了。
-
-
-* 安装说明见: https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379545(v=ws.10)?redirectedfrom=MSDN
-* 无法将“Send-SmigServerData”项识别为 cmdlet、函数、脚本文件或可运行程序的名称：https://community.spiceworks.com/t/windows-powershell-help/356888/3
-* 以及使用说明：https://learn.microsoft.com/en-us/powershell/module/servermigration/send-smigserverdata?view=winserver2012r2-ps
-
+* Send-SmigServerData : 开始连接的传输失败。
+此 cmdlet 无法连接到目标服务器。有关详细信息，请转到 Windows Server 2016 TechCenter，参阅《文件服务迁移指南》中“疑难解答”部分的“数据迁移连接”。
 
 #### 其他方法
 
-
-[老收藏家 - 浅谈NTFS权限迁移与共享权限迁移(下)](https://blog.51cto.com/wzde2012/1874132) Permcopy 使用效果也不理想
-
- 
-
- https://community.spiceworks.com/t/microsoft-system-clr-types-for-sql-server-2012/789626
+[老收藏家 - 浅谈NTFS权限迁移与共享权限迁移(下)](https://blog.51cto.com/wzde2012/1874132) 提到的 Permcopy 使用效果不理想，以及相关搜索到的注册表导入的方式，也行不通。
