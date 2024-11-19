@@ -19,6 +19,7 @@
 # 域控粒度细化
 
 - [域用户统一桌面壁纸](lidu_xihua/ad/ad_bizhi.md)
+- [组策略常用软件下发](lidu_xihua/ad/ruanjian_xiafa.md)
 
 # 日常工作
 
@@ -29,6 +30,7 @@
 - [批量对人员进行文件夹授权](richang/wenjianjia_shouquan.md)
 - [删除用户共享文件夹权限](richang/shanchu_yonghu_wenjianjia_quanxian.md)
 - [文件夹安全权限转换对应的共享权限](richang/wenjianjia_quanxian_zhuanhuan.md)
+- [组织单元人员迁移](richang/zuzhidanyuan_qianyi.md)
 - [组织单元与域用户还原（应急储备）](richang/ou_aduser_huanyuan.md)
 - [实施方案撰写及排版说明](richang/word_paiban.md)
 
@@ -42,6 +44,7 @@
 - [光纤跳纤](guzhang_chuli/guangxuan_tiaoxuan.md)
 - [监控掉线恢复](guzhang_chuli/jiankong_diaoxian_huihu.md)
 - [Ping 传输失败，域控连不上](guzhang_chuli/ping_shibai_yukong_lianbushang.md)
+- [网络正常但登录不上 inode](guzhang_chuli/wangluo_zhenchang_dengbushang_inode.md)
 
 
 

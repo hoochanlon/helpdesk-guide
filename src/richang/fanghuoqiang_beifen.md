@@ -13,6 +13,20 @@
 
 ![ ](https://cdn.sa.net/2024/10/11/HmyXQ6FxwApg3Bq.png)
 
+## 防火墙日志导出
+
+
+![ ](https://cdn.sa.net/2024/11/19/aFoCG8LfzWinkJb.png)
+
+配置允许规则
+
+![ ](https://cdn.sa.net/2024/11/19/IDFsEhW83aLfewV.png)
+
+还有种方式就是进入【监控】->【诊断中心】->【信息采集】，进行采集与导出工作。
+
+![ ](https://cdn.sa.net/2024/11/19/2k5TItFg1HZzURi.png)
+
+
 
 ## 交换机配置备份
 
