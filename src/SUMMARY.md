@@ -24,7 +24,8 @@
 # 日常工作
 
 - [机房巡检工作与UPS应急演练](richang/jifang_xunjian.md)
-- [防火墙月度备份](richang/fanghuoqiang_beifen.md)
+- [交换机配置备份](richang/jiaohuanji_beifen.md)
+- [防火墙配置备份与日志导出](richang/fanghuoqiang_beifen_daochu.md)
 - [上网准入与加域](richang/zhunru_jiayu.md)
 - [批量添加、删除域用户及导出](richang/tianjia_shanchu_daochu_user.md)
 - [批量对人员进行文件夹授权](richang/wenjianjia_shouquan.md)
