@@ -38,6 +38,8 @@
 # 学习网络
 
 - [面试TCP三次握手的学习理解](xuexiwangluo/osi_tcp_woshou.md)
+- [IP路由基础](xuexiwangluo/ip_luyou_jichu.md)
+
 
 # 楼层网络规划
 
