@@ -4,6 +4,14 @@
 
 ![PixPin_2024-12-16_11-38-50](https://img.yonrd.com/i/2024/12/16/ixd7bd.png)
 
+## TCP/IP层
+
+![](https://www.sdada.edu.cn/__local/A/9D/17/FCA60C83850B8113BB5E61C11F9_F9BF22D2_2A8EF.png)
+
+## 数据传输过程
+
+![](https://www.sdada.edu.cn/__local/D/5F/FD/3DBBFB1760B257993ACD81359B1_5AE5ABB8_2E061.png)
+
 ## TCP三次握手过程
 
 syn：同步；seq：序号；ack：确认码。
@@ -45,3 +53,5 @@ syn：同步；seq：序号；ack：确认码。
 * [【图解】三次握手，四次挥手 —— 用心看这一篇就够了-腾讯云开发者社区-腾讯云](https://cloud.tencent.com/developer/article/2015692)
 
 * [📡OSI七层协议大揭秘🔍](https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_5088967090732549889&sourceFrom=search_a)
+
+* [一文搞懂OSI参考模型与TCP/IP-山东工艺美术学院网络信息管理中心](https://www.sdada.edu.cn/wl/info/1073/1627.htm)
