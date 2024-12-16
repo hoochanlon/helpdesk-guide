@@ -63,16 +63,6 @@ IP路由最长匹配原则：
 **PPP**：通常用于单一设备与远程服务器或ISP之间的通信，它还提供链路控制、错误检测、认证等功能。
 
 
-## 网络分层设计
-
-![PixPin_2024-12-16_21-18-57](https://img.yonrd.com/i/2024/12/16/z2at5e.png)
-
-![PixPin_2024-12-16_21-23-27](https://img.yonrd.com/i/2024/12/16/z47tr7.png)
-
-[什么是IP路由？IP路由是如何工作的？ - 华为](https://info.support.huawei.com/info-finder/encyclopedia/zh/IP路由.html)
-
-[网络TCP/IP基础（IP地址网络汇总与规划）-云社区-华为云](https://bbs.huaweicloud.com/blogs/330876)
-
 ## 路由知识扩展
 
 ### 路由迭代
@@ -103,3 +93,9 @@ IP路由最长匹配原则：
 
 ![PixPin_2024-12-16_21-13-53](https://img.yonrd.com/i/2024/12/16/yyn9yj.png)
 
+## 参考资料
+
+* [什么是IP路由？IP路由是如何工作的？ - 华为](https://info.support.huawei.com/info-finder/encyclopedia/zh/IP路由.html)
+* [网络TCP/IP基础（IP地址网络汇总与规划）-云社区-华为云](https://bbs.huaweicloud.com/blogs/330876)
+* [松山湖开发者村综合服务平台](https://community.sslcode.com.cn/6728244082931a478c181fc9.html)
+* HCIA-DatacomV1.0培训教材.pdf

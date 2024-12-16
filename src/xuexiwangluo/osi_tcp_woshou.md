@@ -40,6 +40,12 @@ syn：同步；seq：序号；ack：确认码。
 
 * 我已读，回复确认消息。
 
+## 网络设备分层设计
+
+![PixPin_2024-12-16_21-18-57](https://img.yonrd.com/i/2024/12/16/z2at5e.png)
+
+![PixPin_2024-12-16_21-23-27](https://img.yonrd.com/i/2024/12/16/z47tr7.png)
+
 ## 常用网络协议神图
 
 ![网络协议神图](https://img.yonrd.com/i/2024/12/16/j03ok5.jpeg)
