@@ -164,29 +164,31 @@ DHCP中继
   * 配置DHCP地址池网关的IP地址
   * 开启DHCP中继模式
   * 中继设置成DHCP服务器的IP地址
+* 在接口上设置访问模式，并应用vlan
 
 ```shell
 [R4]
 dhcp enable
 ip pool dhcp_test
- 	gateway-list 192.168.20.254 
+	gateway-list 192.168.20.254 
 	network 192.168.20.0 mask 255.255.255.0 
 	dns-list 1.1.1.1 8.8.8.8 
+
 interface GigabitEthernet0/0/0
- 	ip address 192.168.10.254 255.255.255.0 
- 	dhcp select global
+	ip address 192.168.10.254 255.255.255.0 
+	dhcp select global
  
 [LSW1]
  vlan batch 10 20
  interface Vlanif10
- 	ip address 192.168.10.253 255.255.255.0
- 	dhcp select relay
- 	dhcp relay server-ip 192.168.10.254
+	ip address 192.168.10.253 255.255.255.0
+	dhcp select relay
+	dhcp relay server-ip 192.168.10.254
  
 interface Vlanif20
 	ip address 192.168.20.254 255.255.255.0
- 	dhcp select relay
- 	dhcp relay server-ip 192.168.10.254
+	dhcp select relay
+	dhcp relay server-ip 192.168.10.254
 
 interface GigabitEthernet0/0/1
  	port link-type access
