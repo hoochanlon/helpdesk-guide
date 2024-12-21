@@ -40,7 +40,8 @@
 - [面试TCP三次握手的学习理解](xuexiwangluo/osi_tcp_woshou.md)
 - [IP路由交换基础](xuexiwangluo/ip_luyou_jiaohuan_jichu.md)
 - [网络拓扑寻址与实验](xuexiwangluo/wangluotuopu_xunzhi_shiyan.md)
-- [vlan基础](xuexiwangluo/vlan_jichu.md)
+- [vlan基础（access、trunk、hybird）](xuexiwangluo/vlan_jichu.md)
+- [vlan高级技术（备忘）](xuexiwangluo/vlan_gaojijishu_beiwang.md)
 
 
 # 楼层网络规划
