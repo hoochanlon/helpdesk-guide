@@ -42,6 +42,7 @@
 - [网络拓扑寻址与实验](xuexiwangluo/wangluotuopu_xunzhi_shiyan.md)
 - [vlan基础（access、trunk、hybird）](xuexiwangluo/vlan_jichu.md)
 - [vlan高级技术（备忘）](xuexiwangluo/vlan_gaojijishu_beiwang.md)
+- [vlan间路由](xuexiwangluo/vlan_jian_luyou.md)
 
 
 # 楼层网络规划

@@ -10,7 +10,7 @@
 
 ### super vlan 原理
 
-Sub-VLAN之间属于不同的广播域，也没有属于自己的VLAN接口，因此需要在大集合Super Vlan下建立映射关系，将SuperVlan的子接口作为网关来达到三层通信的效果。
+Sub-VLAN之间属于不同的广播域，也没有属于自己的VLAN接口，因此需要在大集合Super Vlan下建立映射关系，将SuperVlan的虚拟接口作为网关来达到三层通信的效果。
 
 原理图：[四种Proxy ARP原理及区别 - 网管博客](https://www.wlgly.net/post-200.html)
 
@@ -38,7 +38,7 @@ Sub-VLAN之间属于不同的广播域，也没有属于自己的VLAN接口，�
 * 进入vlan
   * 配置super vlan（aggregate-vlan）
   * 划分子vlan（access-vlan）
-* 在super vlan子接口
+* 在super vlan虚拟接口
   * 配置ip地址
   * 开启vlan间arp代理
 * 在各个接口应用sub-vlan
