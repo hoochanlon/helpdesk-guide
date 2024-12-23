@@ -1,5 +1,7 @@
 # 链路聚合知识点基本理解
 
+[eNSP全套软件下载地址汇总-华为企业互动社区](https://forum.huawei.com/enterprise/cn/zh/thread/blog/580934378039689216?blogId=580934378039689216)
+
 ## 链路聚合目的
 
 [链路聚合(Eth-Trunk链路聚合)-CSDN博客](https://blog.csdn.net/solomonzw/article/details/143486267)
@@ -7,8 +9,8 @@
 一言蔽之：把多条物理链路合并成一个逻辑链路。
 
 * 提高宽带：一个聚合口等于多个成员链路口带宽的总和
-* 提高可靠：当一个物理链路出现问题,可以通过其他的链路到达目的地。
-* 负载平衡：一个聚合口可以把流量分散到其他的成员口上。
+* 提高可靠：当一个物理链路出现问题,可以通过其他的链路到达目的地、
+* 负载平衡：一个聚合口可以把流量分散到其他的成员口上.
 
 [链路聚合详解——Link Aggregation - 小王同学！ - 博客园](https://www.cnblogs.com/xiaowangtongxue/p/14754853.html)
 
@@ -111,8 +113,84 @@ interface GigabitEthernet0/0/4
 
 
 
-`dis interface Eth-Trunk 1`查看链路聚合1的详细信息和统计数据，借图 
-
-https://blog.csdn.net/2301_76613557/article/details/138841867
+`dis interface Eth-Trunk 1`查看链路聚合1的详细信息和统计数据.借图 https://blog.csdn.net/2301_76613557/article/details/138841867
 
 ![PixPin_2024-12-23_21-42-06](https://img.yonrd.com/i/2024/12/23/zfdc5j.png)
+
+## 三层链路聚合
+
+[三层交换机如何实现链路聚合_三层交换机链路聚合-CSDN博客](https://blog.csdn.net/STARDEIT/article/details/119833428)
+
+* 若接口性质为三层，那将不可以设置链路类型为trunk或access。
+* 用三层交换机做链路聚合不能进行vlan划分
+  * 因为三层交换机本身就相当于一个路由器，用于不同网段网络之间的通信
+* 三层交换机要使用三层功能（路由转发+二层交换）必须手动开启 (undo portswitch)
+* 三层交换机的物理接口需要手动去开启与路由器一样（undo shutdown）
+* 因为三层功能是实现不同网段之间通信，所以要实现通信就必须用静态路由协议或者动态路由协议，才能使不同网段之间通信。
+
+![PixPin_2024-12-24_01-22-53](https://img.yonrd.com/i/2024/12/24/21aaoy.png)
+
+配置步骤：
+
+* 创建聚合端口组
+  * 开启三层功能（un portswitch）
+  * 配置IP地址（交换机之间的传输）
+  * 进入相关接口
+    * 开启物理接口（un shutdown）
+    * 加入端口组（eth-trunk <编号>）
+* PC终端的接口，开启三层功能
+  * 开启物理端口，并配置网关
+* 静态路由（ip route【目标网段IP地址】【子网掩码】【下一跳地址】，比作送信：【目标网段IP地址】【子网掩码】【对端入口地址】）
+
+CloudEngine 12800系列交换机（本章简称CE12800），是华为公司面向数据中心和高端园区推出的新一代高性能核心交换机。这种级别的交换机才能在聚合口配置IP地址。有关配置生效问题：[选择命令行配置生效模式（立即生效、两阶段生效） - CloudEngine 12800, 12800E V200R005C10 命令参考 - 华为](https://support.huawei.com/enterprise/zh/doc/EDOC1100075562/b6bc6158) 需要在系统视图上输入 commit 提交配置才生效。
+
+```
+[CE1]
+interface Eth-Trunk1
+ undo portswitch
+ ip address 10.1.1.1 255.255.255.0
+
+interface GE1/0/0
+ undo shutdown
+ eth-trunk 1
+
+interface GE1/0/1
+ undo shutdown
+ eth-trunk 1
+
+interface GE1/0/2
+ undo shutdown
+ eth-trunk 1
+
+interface GE1/0/3
+ undo portswitch
+ undo shutdown
+ ip address 192.168.2.254 255.255.255.0
+ 
+ip route-static 192.168.2.0 255.255.255.0 10.1.1.2
+
+[CE2]
+interface Eth-Trunk1
+ undo portswitch
+ ip address 10.1.1.2 255.255.255.0
+
+interface GE1/0/0
+ undo shutdown
+ eth-trunk 1
+ 
+interface GE1/0/1
+ undo shutdown
+ eth-trunk 1
+
+interface GE1/0/2
+ undo shutdown
+ eth-trunk 1
+
+interface GE1/0/3
+ undo portswitch
+ undo shutdown
+ ip address 192.168.2.254 255.255.255.0
+ 
+ip route-static 192.168.2.0 255.255.255.0 10.1.1.1
+```
+
