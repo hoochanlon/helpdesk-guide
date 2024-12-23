@@ -43,6 +43,7 @@
 - [vlan基础（access、trunk、hybird）](xuexiwangluo/vlan_jichu.md)
 - [vlan高级技术（备忘）](xuexiwangluo/vlan_gaojijishu_beiwang.md)
 - [vlan间路由](xuexiwangluo/vlan_jian_luyou.md)
+- [链路聚合知识点基本理解](xuexiwangluo/lianlu_juhe_zhishidian_jibenlijie.md)
 
 
 # 楼层网络规划

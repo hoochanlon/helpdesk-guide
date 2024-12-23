@@ -1,5 +1,8 @@
 # 面试TCP三次握手的学习理解
 
+[eNSP全套软件下载地址汇总-华为企业互动社区](https://forum.huawei.com/enterprise/cn/zh/thread/blog/580934378039689216?blogId=580934378039689216)
+
+
 ## OSI 各层作用
 
 ![PixPin_2024-12-16_11-38-50](https://img.yonrd.com/i/2024/12/16/ixd7bd.png)
