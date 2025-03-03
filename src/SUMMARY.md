@@ -3,6 +3,11 @@
 [《网络、域控与信息安全》](guide/readme.md)
 
 
+# 汇报应对
+
+- [面对“为什么、依据、合理性”拷问，该如何应对？](huibao/weishenme.md)
+- [忙得像陀螺？运维高效工作的秘密](huibao/gongzuo_fangfa.md)
+
 # 从创建域控开始
 
 - [创建域控](creator/ad/anzhuang_yukong.md)
@@ -49,10 +54,9 @@
 - [从零开始学wlan](xuexiwangluo/conglingkaishi_wlan.md)
 
 
-
 # 楼层网络规划
 
-- [网络设备配置](wangluo/wangluo_shebei_peizhi)
+- [网络设备配置](wangluo/wangluo_shebei_peizhi.md)
 
 # 综合故障排除
 
@@ -62,8 +66,6 @@
 - [Ping 传输失败，域控连不上](guzhang_chuli/ping_shibai_yukong_lianbushang.md)
 - [网络正常但登录不上 inode](guzhang_chuli/wangluo_zhenchang_dengbushang_inode.md)
 - [网络故障排除思路](guzhang_chuli/wangluo_guzhanpaichu_silu.md)
-
-
 
 
 
