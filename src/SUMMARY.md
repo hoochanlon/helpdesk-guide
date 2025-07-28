@@ -52,6 +52,7 @@
 - [堆叠入门基础](xuexiwangluo/duidie_rumen_jichu.md)
 - [ACL结合NAT实现EasyIP](xuexiwangluo/easyip.md)
 - [从零开始学wlan](xuexiwangluo/conglingkaishi_wlan.md)
+- [核心与汇聚配置解读](xuexiwangluo/hexin_huiju_jieru_jiedu.md)
 
 
 # 楼层网络规划
@@ -66,6 +67,7 @@
 - [Ping 传输失败，域控连不上](guzhang_chuli/ping_shibai_yukong_lianbushang.md)
 - [网络正常但登录不上 inode](guzhang_chuli/wangluo_zhenchang_dengbushang_inode.md)
 - [配了IP，但上不了网](guzhang_chuli/pei_ip_shangbuliao_wang.md)
+- [定位另一台IP冲突的终端](guzhang_chuli/chazhao_ip_chongtu.md)
 - [SSH配置后登录失败排查](guzhang_chuli/ssh_peizhi_denglu_shibai_paicha.md)
 - [网络故障排除思路](guzhang_chuli/wangluo_guzhanpaichu_silu.md)
 
