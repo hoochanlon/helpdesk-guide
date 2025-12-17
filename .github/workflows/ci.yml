@@ -4,45 +4,29 @@ on:
   push:
     branches:
       - master
-  # 添加手动触发选项
   workflow_dispatch:
-    # 可选：添加输入参数
-    inputs:
-      environment:
-        description: '部署环境'
-        required: false
-        default: 'production'
-        type: choice
-        options:
-          - production
-          - staging
-      skip-build:
-        description: '跳过构建步骤（仅部署已构建的文件）'
-        required: false
-        default: false
-        type: boolean
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # 更新到 v3
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3  # 更新到 v3
         with:
-          node-version: 16
+          node-version: 20  # 更新到 20 或更高版本
+          cache: 'yarn'  # 添加 yarn 缓存以加快构建速度
 
       - name: Install Dependencies
-        run: yarn install
+        run: yarn install --frozen-lockfile  # 添加 --frozen-lockfile 确保版本一致性
 
       - name: Build
-        if: ${{ !inputs.skip-build || github.event_name != 'workflow_dispatch' }}
         run: yarn docs:build
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+        uses: JamesIves/github-pages-deploy-action@v4  # 更新到最新版本
         with:
           branch: gh-pages
           folder: docs/.vuepress/dist
