@@ -1,43 +1,39 @@
-name: Deploy to GitHub Pages
+name: Deploy GitHub Pages
 
 on:
   push:
-    branches: ["master"]
+    branches:
+      - main
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: '20.x'
 
       - name: Install Dependencies
         run: |
+          # 根据项目实际情况选择合适的包管理器
           if [ -f yarn.lock ]; then
+            echo "Using yarn..."
             yarn install --frozen-lockfile
-          else
+          elif [ -f package-lock.json ]; then
+            echo "Using npm ci..."
             npm ci
+          else
+            echo "Using npm install..."
+            npm install
           fi
 
       - name: Build
@@ -48,11 +44,9 @@ jobs:
             npm run docs:build
           fi
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: docs/.vuepress/dist
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vuepress/dist
+          publish_branch: gh-pages
