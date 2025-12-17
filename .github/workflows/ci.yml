@@ -11,22 +11,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3  # 更新到 v3
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3  # 更新到 v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 20  # 更新到 20 或更高版本
-          cache: 'yarn'  # 添加 yarn 缓存以加快构建速度
+          node-version: '20.x'
+
+      - name: Generate yarn.lock if missing
+        run: |
+          if [ ! -f yarn.lock ]; then
+            echo "Generating yarn.lock file..."
+            yarn install --no-lockfile  # 先安装生成 lock 文件
+            yarn install --frozen-lockfile  # 再使用 lock 文件安装
+          fi
 
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile  # 添加 --frozen-lockfile 确保版本一致性
+        run: yarn install --frozen-lockfile
 
       - name: Build
         run: yarn docs:build
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4  # 更新到最新版本
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: docs/.vuepress/dist
