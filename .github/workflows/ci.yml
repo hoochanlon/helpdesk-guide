@@ -1,39 +1,58 @@
-name: Deploy GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - master
+    branches: ["master"]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  build-and-deploy:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20.x'
 
-      - name: Generate yarn.lock if missing
+      - name: Install Dependencies
         run: |
-          if [ ! -f yarn.lock ]; then
-            echo "Generating yarn.lock file..."
-            yarn install --no-lockfile  # 先安装生成 lock 文件
-            yarn install --frozen-lockfile  # 再使用 lock 文件安装
+          if [ -f yarn.lock ]; then
+            yarn install --frozen-lockfile
+          else
+            npm ci
           fi
 
-      - name: Install Dependencies
-        run: yarn install --frozen-lockfile
-
       - name: Build
-        run: yarn docs:build
+        run: |
+          if [ -f yarn.lock ]; then
+            yarn docs:build
+          else
+            npm run docs:build
+          fi
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          branch: gh-pages
-          folder: docs/.vuepress/dist
+          path: docs/.vuepress/dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
