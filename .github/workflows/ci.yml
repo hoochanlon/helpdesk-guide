@@ -4,6 +4,23 @@ on:
   push:
     branches:
       - master
+  # 添加手动触发选项
+  workflow_dispatch:
+    # 可选：添加输入参数
+    inputs:
+      environment:
+        description: '部署环境'
+        required: false
+        default: 'production'
+        type: choice
+        options:
+          - production
+          - staging
+      skip-build:
+        description: '跳过构建步骤（仅部署已构建的文件）'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   build-and-deploy:
@@ -21,6 +38,7 @@ jobs:
         run: yarn install
 
       - name: Build
+        if: ${{ !inputs.skip-build || github.event_name != 'workflow_dispatch' }}
         run: yarn docs:build
 
       - name: Deploy 🚀
